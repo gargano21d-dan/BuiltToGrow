@@ -1,0 +1,92 @@
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px 32px;
+	border-bottom: 1px solid var(--grigio);
+}
+
+.logo {
+	font-size: 1.6rem;
+	font-weight: bold;
+	color: var(--verde-scuro);
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	gap: 28px;
+}
+
+nav a {
+	color: var(--nero);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+nav a:hover {
+	color: var(--verde-scuro);
+}
+
+.azioni-utente {
+	display: flex;
+	gap: 20px;
+}
+
+.azioni-utente a {
+	color: var(--nero);
+	text-decoration: none;
+}
+
+.azioni-utente a:hover {
+	color: var(--verde-scuro);
+}
+
+.hero {
+	text-align: center;
+	padding: 90px 20px;
+	background-color: #f4f4f4;
+}
+
+.hero h1 {
+	font-size: 2.8rem;
+	margin-bottom: 16px;
+}
+
+.hero p {
+	font-size: 1.1rem;
+	color: #444;
+	max-width: 600px;
+	margin: 0 auto 28px auto;
+}
+
+.btn {
+	display: inline-block;
+	background-color: var(--verde-scuro);
+	color: var(--bianco);
+	text-decoration: none;
+	padding: 14px 30px;
+	border-radius: 6px;
+	font-weight: bold;
+}
+
+.btn:hover {
+	background-color: var(--verde-chiaro);
+}
+
+.evidenza {
+	text-align: center;
+	padding: 60px 20px;
+}
+
+.evidenza h2 {
+	margin-bottom: 12px;
+}
+
+footer {
+	background-color: var(--nero);
+	color: var(--bianco);
+	text-align: center;
+	padding: 24px;
+	margin-top: 40px;
+}
