@@ -1,0 +1,41 @@
+.catalogo {
+	display: grid;
+	grid-template-columns: 220px 1fr;
+	gap: 32px;
+	max-width: 1200px;
+	margin: 40px auto;
+	padding: 0 20px;
+}
+
+.sidebar h3 {
+	margin-bottom: 16px;
+	border-bottom: 2px solid var(--verde-scuro);
+	padding-bottom: 8px;
+}
+
+.sidebar ul {
+	list-style: none;
+}
+
+.sidebar li {
+	margin-bottom: 10px;
+}
+
+.sidebar a {
+	color: var(--nero);
+	text-decoration: none;
+}
+
+.sidebar a:hover {
+	color: var(--verde-scuro);
+}
+
+.prodotti h1 {
+	margin-bottom: 24px;
+}
+
+.griglia-catalogo {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+}
