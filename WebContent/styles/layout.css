@@ -72,6 +72,12 @@ nav a:hover {
 	transform: translateY(-4px);
 }
 
+.card-link {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
 .card-img {
 	height: 160px;
 	background-color: #f0f0f0;

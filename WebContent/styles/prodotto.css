@@ -1,0 +1,71 @@
+.prodotto-dettaglio {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+	max-width: 1100px;
+	margin: 40px auto;
+	padding: 0 20px;
+}
+
+.prodotto-img {
+	height: 400px;
+	background-color: #f0f0f0;
+	border-radius: 10px;
+}
+
+.prodotto-info h1 {
+	margin-bottom: 16px;
+}
+
+.prezzo-grande {
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--verde-scuro);
+	margin-bottom: 20px;
+}
+
+.descrizione {
+	color: #444444;
+	margin-bottom: 28px;
+}
+
+.acquisto {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.quantita {
+	width: 70px;
+	padding: 10px;
+	border: 1px solid var(--grigio);
+	border-radius: 6px;
+	font-size: 1rem;
+}
+
+.scheda-tecnica {
+	max-width: 1100px;
+	margin: 20px auto 60px auto;
+	padding: 0 20px;
+}
+
+.scheda-tecnica h2 {
+	margin-bottom: 16px;
+}
+
+.scheda-tecnica table {
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 420px;
+}
+
+.scheda-tecnica th,
+.scheda-tecnica td {
+	border: 1px solid #e6e6e6;
+	padding: 10px 16px;
+	text-align: left;
+}
+
+.scheda-tecnica th {
+	background-color: #f4f7f2;
+}
