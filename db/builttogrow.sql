@@ -1,6 +1,7 @@
 CREATE DATABASE IF NOT EXISTS builttogrow;
 USE builttogrow;
 
+DROP TABLE IF EXISTS recensione;
 DROP TABLE IF EXISTS dettaglio_ordine;
 DROP TABLE IF EXISTS ordine;
 DROP TABLE IF EXISTS utente;
@@ -48,4 +49,15 @@ CREATE TABLE dettaglio_ordine (
 	iva DECIMAL(4,2) NOT NULL,
 	FOREIGN KEY (ordine_id) REFERENCES ordine(id),
 	FOREIGN KEY (prodotto_id) REFERENCES prodotto(id) ON DELETE SET NULL
+);
+
+CREATE TABLE recensione (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	utente_id INT NOT NULL,
+	prodotto_id INT NOT NULL,
+	stelle INT NOT NULL CHECK (stelle BETWEEN 1 AND 5),
+	descrizione VARCHAR(500),
+	data_recensione TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	FOREIGN KEY (utente_id) REFERENCES utente(id),
+	FOREIGN KEY (prodotto_id) REFERENCES prodotto(id)
 );
