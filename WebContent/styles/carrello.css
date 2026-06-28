@@ -1,0 +1,94 @@
+.carrello {
+	max-width: 1100px;
+	margin: 40px auto;
+	padding: 0 20px;
+}
+
+.carrello h1 {
+	margin-bottom: 24px;
+}
+
+.carrello-contenuto {
+	display: grid;
+	grid-template-columns: 1fr 320px;
+	gap: 32px;
+	align-items: start;
+}
+
+.tabella-carrello {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.tabella-carrello th,
+.tabella-carrello td {
+	padding: 14px 10px;
+	border-bottom: 1px solid #e6e6e6;
+	text-align: left;
+}
+
+.tabella-carrello th {
+	color: #666666;
+	font-size: 0.9rem;
+}
+
+.tabella-carrello .quantita {
+	width: 60px;
+	padding: 6px;
+	border: 1px solid var(--grigio);
+	border-radius: 6px;
+}
+
+.rimuovi {
+	color: #c0392b;
+	text-decoration: none;
+	font-size: 0.9rem;
+}
+
+.rimuovi:hover {
+	text-decoration: underline;
+}
+
+.riepilogo {
+	border: 1px solid #e6e6e6;
+	border-radius: 10px;
+	padding: 24px;
+	background-color: #fafafa;
+}
+
+.riepilogo h2 {
+	font-size: 1.2rem;
+	margin-bottom: 18px;
+}
+
+.riepilogo .riga {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 12px;
+}
+
+.riepilogo .totale {
+	font-weight: bold;
+	font-size: 1.2rem;
+	border-top: 1px solid #e6e6e6;
+	padding-top: 12px;
+	margin-top: 6px;
+}
+
+.riepilogo .btn {
+	display: block;
+	text-align: center;
+	margin-top: 18px;
+}
+
+.continua {
+	display: inline-block;
+	margin-top: 28px;
+	color: var(--verde-scuro);
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.continua:hover {
+	text-decoration: underline;
+}
