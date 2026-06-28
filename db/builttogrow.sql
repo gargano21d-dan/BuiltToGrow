@@ -61,3 +61,10 @@ CREATE TABLE recensione (
 	FOREIGN KEY (utente_id) REFERENCES utente(id),
 	FOREIGN KEY (prodotto_id) REFERENCES prodotto(id)
 );
+
+INSERT INTO categoria (nome, descrizione) VALUES
+('Proteine', 'Proteine in polvere per il recupero muscolare'),
+('Creatina', 'Integratori di creatina per la forza'),
+('Vitamine', 'Vitamine e sali minerali'),
+('Abbigliamento', 'Abbigliamento tecnico sportivo'),
+('Accessori', 'Shaker, borse e accessori per il fitness');
