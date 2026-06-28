@@ -82,3 +82,7 @@ INSERT INTO utente (nome, email, password, ruolo) VALUES
 ('Danilo Gargano', 'danilo@builttogrow.it', 'password123', 'cliente'),
 ('Mario Boccia', 'mario@builttogrow.it', 'password123', 'cliente'),
 ('Admin', 'admin@builttogrow.it', 'admin123', 'admin');
+
+INSERT INTO ordine (utente_id, prezzo_totale) VALUES
+(1, 59.97),
+(2, 44.98);
