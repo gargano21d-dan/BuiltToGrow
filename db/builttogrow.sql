@@ -29,6 +29,7 @@ CREATE TABLE utente (
 	nome VARCHAR(100) NOT NULL,
 	email VARCHAR(150) NOT NULL UNIQUE,
 	password VARCHAR(255) NOT NULL,
+	ruolo VARCHAR(20) NOT NULL DEFAULT 'cliente',
 	data_registrazione TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -76,3 +77,8 @@ INSERT INTO prodotto (nome, descrizione, prezzo, quantita, categoria_id) VALUES
 ('T-Shirt Performance', 'Maglietta tecnica traspirante da uomo', 24.99, 40, 4),
 ('Shaker BuiltToGrow', 'Shaker da 600ml con griglia anti-grumi', 9.99, 200, 5),
 ('Cintura Sollevamento', 'Cintura da powerlifting in pelle', 39.99, 25, 5);
+
+INSERT INTO utente (nome, email, password, ruolo) VALUES
+('Danilo Gargano', 'danilo@builttogrow.it', 'password123', 'cliente'),
+('Mario Boccia', 'mario@builttogrow.it', 'password123', 'cliente'),
+('Admin', 'admin@builttogrow.it', 'admin123', 'admin');
