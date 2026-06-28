@@ -86,3 +86,10 @@ INSERT INTO utente (nome, email, password, ruolo) VALUES
 INSERT INTO ordine (utente_id, prezzo_totale) VALUES
 (1, 59.97),
 (2, 44.98);
+
+INSERT INTO dettaglio_ordine (ordine_id, prodotto_id, quantita, prezzo_unitario, iva) VALUES
+(1, 1, 1, 34.99, 22.00),
+(1, 5, 1, 9.99, 22.00),
+(1, 3, 1, 14.99, 22.00),
+(2, 2, 1, 19.99, 22.00),
+(2, 4, 1, 24.99, 22.00);
