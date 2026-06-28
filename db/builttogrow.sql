@@ -1,6 +1,7 @@
 CREATE DATABASE IF NOT EXISTS builttogrow;
 USE builttogrow;
 
+DROP TABLE IF EXISTS utente;
 DROP TABLE IF EXISTS prodotto;
 DROP TABLE IF EXISTS categoria;
 
@@ -18,4 +19,12 @@ CREATE TABLE prodotto (
 	quantita INT DEFAULT 0,
 	categoria_id INT,
 	FOREIGN KEY (categoria_id) REFERENCES categoria(id)
+);
+
+CREATE TABLE utente (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	nome VARCHAR(100) NOT NULL,
+	email VARCHAR(150) NOT NULL UNIQUE,
+	password VARCHAR(255) NOT NULL,
+	data_registrazione TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
