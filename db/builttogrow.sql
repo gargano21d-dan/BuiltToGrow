@@ -93,3 +93,8 @@ INSERT INTO dettaglio_ordine (ordine_id, prodotto_id, quantita, prezzo_unitario,
 (1, 3, 1, 14.99, 22.00),
 (2, 2, 1, 19.99, 22.00),
 (2, 4, 1, 24.99, 22.00);
+
+INSERT INTO recensione (utente_id, prodotto_id, stelle, descrizione) VALUES
+(1, 1, 5, 'Ottime proteine, si sciolgono benissimo!'),
+(2, 2, 4, 'Buona creatina, prezzo onesto.'),
+(1, 4, 5, 'Maglietta comoda e traspirante.');
