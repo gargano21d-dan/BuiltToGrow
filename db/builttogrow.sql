@@ -68,3 +68,11 @@ INSERT INTO categoria (nome, descrizione) VALUES
 ('Vitamine', 'Vitamine e sali minerali'),
 ('Abbigliamento', 'Abbigliamento tecnico sportivo'),
 ('Accessori', 'Shaker, borse e accessori per il fitness');
+
+INSERT INTO prodotto (nome, descrizione, prezzo, quantita, categoria_id) VALUES
+('Proteine Whey 1kg', 'Proteine del siero del latte, gusto cioccolato', 34.99, 50, 1),
+('Creatina Monoidrato', 'Creatina monoidrato micronizzata, 300g', 19.99, 80, 2),
+('Vitamine Multipack', 'Complesso multivitaminico, 60 compresse', 14.99, 100, 3),
+('T-Shirt Performance', 'Maglietta tecnica traspirante da uomo', 24.99, 40, 4),
+('Shaker BuiltToGrow', 'Shaker da 600ml con griglia anti-grumi', 9.99, 200, 5),
+('Cintura Sollevamento', 'Cintura da powerlifting in pelle', 39.99, 25, 5);
