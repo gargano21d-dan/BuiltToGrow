@@ -1,0 +1,58 @@
+.auth {
+	display: flex;
+	justify-content: center;
+	padding: 60px 20px;
+}
+
+.form-box {
+	width: 100%;
+	max-width: 400px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #e6e6e6;
+	border-radius: 10px;
+	padding: 32px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.form-box h1 {
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+.form-box label {
+	font-weight: 500;
+	margin-bottom: 6px;
+}
+
+.form-box input {
+	padding: 12px;
+	margin-bottom: 18px;
+	border: 1px solid var(--grigio);
+	border-radius: 6px;
+	font-size: 1rem;
+}
+
+.form-box input:focus {
+	outline: none;
+	border-color: var(--verde-scuro);
+}
+
+.form-box .btn {
+	border: none;
+	cursor: pointer;
+	font-size: 1rem;
+	margin-top: 6px;
+}
+
+.link-registrati {
+	text-align: center;
+	margin-top: 18px;
+	font-size: 0.9rem;
+}
+
+.link-registrati a {
+	color: var(--verde-scuro);
+	text-decoration: none;
+	font-weight: bold;
+}
