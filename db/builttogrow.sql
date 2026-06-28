@@ -1,2 +1,10 @@
 CREATE DATABASE IF NOT EXISTS builttogrow;
 USE builttogrow;
+
+CREATE TABLE IF NOT EXISTS prodotto (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	nome VARCHAR(100) NOT NULL,
+	descrizione VARCHAR(500),
+	prezzo DECIMAL(10,2) NOT NULL,
+	quantita INT DEFAULT 0
+);
