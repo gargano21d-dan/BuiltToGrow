@@ -12,24 +12,7 @@
 </head>
 <body>
 
-	<header>
-		<a href="${pageContext.request.contextPath}/index.html" class="logo">BuiltToGrow</a>
-
-		<nav>
-			<ul>
-				<li><a href="${pageContext.request.contextPath}/catalogo">Integrazione</a></li>
-				<li><a href="${pageContext.request.contextPath}/catalogo">Vestiario</a></li>
-				<li><a href="${pageContext.request.contextPath}/catalogo">Accessori</a></li>
-				<li><a href="#">Obiettivi</a></li>
-				<li><a href="#">Blog</a></li>
-			</ul>
-		</nav>
-
-		<div class="azioni-utente">
-			<a href="${pageContext.request.contextPath}/login.html">Accedi</a>
-			<a href="${pageContext.request.contextPath}/carrello">Carrello</a>
-		</div>
-	</header>
+	<%@ include file="../components/navbar.jsp" %>
 
 	<main class="carrello">
 
@@ -79,9 +62,7 @@
 
 	</main>
 
-	<footer>
-		<p>BuiltToGrow &copy; 2026 - Progetto Tecnologie Software per il Web</p>
-	</footer>
+	<%@ include file="../components/footer.jsp" %>
 
 </body>
 </html>
