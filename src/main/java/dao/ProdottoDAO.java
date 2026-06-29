@@ -34,4 +34,29 @@ public class ProdottoDAO {
 
 		return prodotti;
 	}
+
+	public ProdottoBean doRetrieveByKey(int id) throws SQLException {
+		String sql = "SELECT * FROM prodotto WHERE id = ?";
+
+		try (Connection con = DBConnection.getConnection();
+				PreparedStatement ps = con.prepareStatement(sql)) {
+
+			ps.setInt(1, id);
+
+			try (ResultSet rs = ps.executeQuery()) {
+				if (rs.next()) {
+					ProdottoBean p = new ProdottoBean();
+					p.setId(rs.getInt("id"));
+					p.setNome(rs.getString("nome"));
+					p.setDescrizione(rs.getString("descrizione"));
+					p.setPrezzo(rs.getDouble("prezzo"));
+					p.setQuantita(rs.getInt("quantita"));
+					p.setCategoriaId(rs.getInt("categoria_id"));
+					return p;
+				}
+			}
+		}
+
+		return null;
+	}
 }
