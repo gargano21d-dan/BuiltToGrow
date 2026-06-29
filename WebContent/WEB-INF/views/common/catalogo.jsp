@@ -27,7 +27,7 @@
 
 		<div class="azioni-utente">
 			<a href="${pageContext.request.contextPath}/login.html">Accedi</a>
-			<a href="${pageContext.request.contextPath}/carrello.html">Carrello</a>
+			<a href="${pageContext.request.contextPath}/carrello">Carrello</a>
 		</div>
 	</header>
 
@@ -55,7 +55,7 @@
 						<div class="card-img"></div>
 						<h3>${p.nome}</h3>
 						<p class="prezzo">${p.prezzo} &euro;</p>
-						<a href="#" class="btn-card">Aggiungi</a>
+						<a href="${pageContext.request.contextPath}/carrello?action=add&id=${p.id}" class="btn-card">Aggiungi</a>
 					</article>
 				</c:forEach>
 
