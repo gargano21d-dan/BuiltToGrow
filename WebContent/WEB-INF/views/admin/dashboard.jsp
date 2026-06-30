@@ -17,13 +17,17 @@
 	<main class="carrello">
 		<h1>Area Amministratore &mdash; Prodotti</h1>
 
+		<a href="${pageContext.request.contextPath}/admin/prodotto?action=nuovo" class="btn">+ Aggiungi prodotto</a>
+
 		<table class="tabella-carrello">
 			<thead>
 				<tr>
 					<th>ID</th>
 					<th>Nome</th>
 					<th>Prezzo</th>
+					<th>IVA</th>
 					<th>Quantit&agrave;</th>
+					<th>Azioni</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -32,7 +36,12 @@
 						<td>${p.id}</td>
 						<td>${p.nome}</td>
 						<td>${p.prezzo} &euro;</td>
+						<td>${p.iva}%</td>
 						<td>${p.quantita}</td>
+						<td>
+							<a href="${pageContext.request.contextPath}/admin/prodotto?action=modifica&id=${p.id}">Modifica</a>
+							<a href="${pageContext.request.contextPath}/admin/prodotto?action=elimina&id=${p.id}" class="rimuovi" onclick="return confirm('Sei sicuro di voler eliminare questo prodotto?');">Elimina</a>
+						</td>
 					</tr>
 				</c:forEach>
 			</tbody>
