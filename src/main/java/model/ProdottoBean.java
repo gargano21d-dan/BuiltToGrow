@@ -8,6 +8,7 @@ public class ProdottoBean {
 	private double prezzo;
 	private int quantita;
 	private int categoriaId;
+	private double iva;
 
 	public int getId() {
 		return id;
@@ -55,5 +56,13 @@ public class ProdottoBean {
 
 	public void setCategoriaId(int categoriaId) {
 		this.categoriaId = categoriaId;
+	}
+
+	public double getIva() {
+		return iva;
+	}
+
+	public void setIva(double iva) {
+		this.iva = iva;
 	}
 }

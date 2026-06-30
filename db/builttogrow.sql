@@ -19,6 +19,7 @@ CREATE TABLE prodotto (
 	nome VARCHAR(100) NOT NULL,
 	descrizione VARCHAR(500),
 	prezzo DECIMAL(10,2) NOT NULL,
+	iva DECIMAL(4,2) NOT NULL DEFAULT 22.00,
 	quantita INT DEFAULT 0,
 	categoria_id INT,
 	FOREIGN KEY (categoria_id) REFERENCES categoria(id)
