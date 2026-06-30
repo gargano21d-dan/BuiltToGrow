@@ -30,7 +30,7 @@
 			<input type="text" id="prezzo" name="prezzo" value="${prodotto.prezzo}" pattern="[0-9]+([.][0-9]+)?" title="Solo numeri, es. 34.99" required>
 
 			<label for="iva">IVA (%)</label>
-			<input type="text" id="iva" name="iva" value="${prodotto.iva}" required>
+			<input type="text" id="iva" name="iva" value="${prodotto.iva}" pattern="[0-9]+([.][0-9]+)?" title="Solo numeri, es. 22" required>
 
 			<label for="quantita">Quantit&agrave;</label>
 			<input type="text" id="quantita" name="quantita" value="${prodotto.quantita}" required>
