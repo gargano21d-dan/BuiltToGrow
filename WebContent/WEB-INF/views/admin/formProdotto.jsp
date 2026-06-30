@@ -33,7 +33,7 @@
 			<input type="text" id="iva" name="iva" value="${prodotto.iva}" pattern="[0-9]+([.][0-9]+)?" title="Solo numeri, es. 22" required>
 
 			<label for="quantita">Quantit&agrave;</label>
-			<input type="text" id="quantita" name="quantita" value="${prodotto.quantita}" required>
+			<input type="text" id="quantita" name="quantita" value="${prodotto.quantita}" pattern="[0-9]+" title="Solo numeri interi" required>
 
 			<label for="categoria_id">Categoria</label>
 			<select id="categoria_id" name="categoria_id" required>
