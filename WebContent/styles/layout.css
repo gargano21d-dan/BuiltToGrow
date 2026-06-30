@@ -110,6 +110,16 @@ nav a:hover {
 	background-color: var(--verde-chiaro);
 }
 
+.conferma {
+	background-color: #e6f4ea;
+	color: var(--verde-scuro);
+	border: 1px solid var(--verde-chiaro);
+	padding: 12px 16px;
+	border-radius: 6px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
 footer {
 	background-color: var(--nero);
 	color: var(--bianco);
