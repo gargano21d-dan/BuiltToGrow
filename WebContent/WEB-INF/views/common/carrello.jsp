@@ -51,7 +51,7 @@
 					<aside class="riepilogo">
 						<h2>Riepilogo ordine</h2>
 						<div class="riga totale"><span>Totale</span><span>${carrello.totale} &euro;</span></div>
-						<a href="#" class="btn">Procedi al checkout</a>
+						<a href="${pageContext.request.contextPath}/checkout" class="btn">Procedi al checkout</a>
 					</aside>
 
 				</div>
