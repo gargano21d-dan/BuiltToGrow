@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -26,16 +27,20 @@
 			<input type="text" id="descrizione" name="descrizione" value="${prodotto.descrizione}">
 
 			<label for="prezzo">Prezzo (&euro;)</label>
-			<input type="number" step="0.01" id="prezzo" name="prezzo" value="${prodotto.prezzo}" required>
+			<input type="text" id="prezzo" name="prezzo" value="${prodotto.prezzo}" pattern="[0-9]+([.][0-9]+)?" title="Solo numeri, es. 34.99" required>
 
 			<label for="iva">IVA (%)</label>
-			<input type="number" step="0.01" id="iva" name="iva" value="${prodotto.iva}" required>
+			<input type="text" id="iva" name="iva" value="${prodotto.iva}" required>
 
 			<label for="quantita">Quantit&agrave;</label>
-			<input type="number" id="quantita" name="quantita" value="${prodotto.quantita}" required>
+			<input type="text" id="quantita" name="quantita" value="${prodotto.quantita}" required>
 
-			<label for="categoria_id">ID Categoria</label>
-			<input type="number" id="categoria_id" name="categoria_id" value="${prodotto.categoriaId}" required>
+			<label for="categoria_id">Categoria</label>
+			<select id="categoria_id" name="categoria_id" required>
+				<c:forEach var="cat" items="${categorie}">
+					<option value="${cat.id}" ${cat.id == prodotto.categoriaId ? 'selected' : ''}>${cat.nome}</option>
+				</c:forEach>
+			</select>
 
 			<button type="submit" class="btn">Salva</button>
 			<p class="link-registrati"><a href="${pageContext.request.contextPath}/admin">&larr; Torna alla lista</a></p>

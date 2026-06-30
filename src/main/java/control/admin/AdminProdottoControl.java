@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.CategoriaDAO;
 import dao.ProdottoDAO;
 import model.ProdottoBean;
 import model.UtenteBean;
@@ -35,11 +36,13 @@ public class AdminProdottoControl extends HttpServlet {
 
 		try {
 			if ("nuovo".equals(action)) {
+				request.setAttribute("categorie", new CategoriaDAO().doRetrieveAll());
 				request.getRequestDispatcher("/WEB-INF/views/admin/formProdotto.jsp").forward(request, response);
 			} else if ("modifica".equals(action)) {
 				int id = Integer.parseInt(request.getParameter("id"));
 				ProdottoBean prodotto = new ProdottoDAO().doRetrieveByKey(id);
 				request.setAttribute("prodotto", prodotto);
+				request.setAttribute("categorie", new CategoriaDAO().doRetrieveAll());
 				request.getRequestDispatcher("/WEB-INF/views/admin/formProdotto.jsp").forward(request, response);
 			} else if ("elimina".equals(action)) {
 				int id = Integer.parseInt(request.getParameter("id"));
