@@ -120,6 +120,30 @@ nav a:hover {
 	font-weight: bold;
 }
 
+.pagina-errore {
+	text-align: center;
+	padding: 80px 20px;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.pagina-errore h1 {
+	font-size: 6rem;
+	color: var(--verde-scuro);
+	line-height: 1;
+	margin-bottom: 8px;
+}
+
+.pagina-errore h2 {
+	font-size: 1.8rem;
+	margin-bottom: 16px;
+}
+
+.pagina-errore p {
+	color: #666;
+	margin-bottom: 28px;
+}
+
 footer {
 	background-color: var(--nero);
 	color: var(--bianco);
