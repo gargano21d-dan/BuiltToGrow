@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.UtenteDAO;
 import model.UtenteBean;
+import util.PasswordUtil;
 
 @WebServlet("/registrazione")
 public class RegisterControl extends HttpServlet {
@@ -41,7 +42,7 @@ public class RegisterControl extends HttpServlet {
 			UtenteBean utente = new UtenteBean();
 			utente.setNome(nome);
 			utente.setEmail(email);
-			utente.setPassword(password);
+			utente.setPassword(PasswordUtil.cifra(password));
 			utente.setRuolo("cliente");
 			dao.doSave(utente);
 
