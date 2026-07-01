@@ -80,9 +80,9 @@ INSERT INTO prodotto (nome, descrizione, prezzo, quantita, categoria_id) VALUES
 ('Cintura Sollevamento', 'Cintura da powerlifting in pelle', 39.99, 25, 5);
 
 INSERT INTO utente (nome, email, password, ruolo) VALUES
-('Danilo Gargano', 'danilo@builttogrow.it', 'password123', 'cliente'),
-('Mario Boccia', 'mario@builttogrow.it', 'password123', 'cliente'),
-('Admin', 'admin@builttogrow.it', 'admin123', 'admin');
+('Danilo Gargano', 'danilo@builttogrow.it', 'ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f', 'cliente'),
+('Mario Boccia', 'mario@builttogrow.it', 'ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f', 'cliente'),
+('Admin', 'admin@builttogrow.it', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9', 'admin');
 
 INSERT INTO ordine (utente_id, prezzo_totale) VALUES
 (1, 59.97),
