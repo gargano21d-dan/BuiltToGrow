@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import dao.UtenteDAO;
 import model.UtenteBean;
+import util.PasswordUtil;
 
 @WebServlet("/login")
 public class LoginControl extends HttpServlet {
@@ -29,7 +30,7 @@ public class LoginControl extends HttpServlet {
 		String password = request.getParameter("password");
 
 		try {
-			UtenteBean utente = new UtenteDAO().doLogin(email, password);
+			UtenteBean utente = new UtenteDAO().doLogin(email, PasswordUtil.cifra(password));
 			if (utente != null) {
 				request.getSession().setAttribute("utente", utente);
 				response.sendRedirect(request.getContextPath() + "/home");
